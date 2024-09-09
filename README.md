@@ -1,8 +1,8 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
+# 👨🏻‍💻 Mizradev Portfolio
 
 <div align="center">
 <a href="https://porfolio.dev/">
-<img src="./public/porfolio.webp">
+<img src="./public/logo.svg">
 </a>
 <p></p>
 </div>
@@ -18,10 +18,10 @@
 
 </div>
 
-## 🫂 Contribuidores
+## 🫂 Jorge
 
-<a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
+<!-- <a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=midudev/porfolio.dev" />
-</a>
+</a> -->
 
 <p></p>

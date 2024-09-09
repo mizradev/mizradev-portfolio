@@ -20,7 +20,7 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "mailto:jorgemizrain@gmail.com",
   },
 ]
 ---
@@ -29,20 +29,26 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="container px-3 lg:max-w-[1114px] flex flex-wrap text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-between items-center"
   >
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
-    <ThemeToggle />
+    <a class="flex gap-2 items-center self-center text-3xl whitespace-nowrap " href="/"> 
+      <img src="/logo.svg" alt="">
+       </a>
+
+       <div class="items-center justify-between w-full md:flex md:w-auto md:order-1 transition-all duration-500 hidden">
+        {
+          navItems.map((link) => (
+            <a
+              class="relative block px-2 py-2 transition hover:text-emerald-500 dark:hover:text-emerald-500"
+              aria-label={link.label}
+              href={link.url}
+            >
+              {link.title}
+            </a>
+          ))
+        }
+       </div>
+    <ThemeToggle class="md:order-2" />
   </nav>
 </header>
 
@@ -56,9 +62,9 @@ const navItems = [
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-blue-500")
+              item.classList.add("text-emerald-500")
             } else {
-              item.classList.remove("text-blue-500")
+              item.classList.remove("text-emerald-500")
             }
           })
         }

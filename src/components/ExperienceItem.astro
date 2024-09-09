@@ -6,27 +6,35 @@ interface Props {
   company: string
   description: string
   link?: string
-  date: string
+  date: string,
+  jobType: string
 }
 
-const { title, company, description, link, date } = Astro.props
+const { title, company, description, link, date, jobType } = Astro.props
 ---
 
 <div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative mx-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
 >
-  <div class="relative pb-12 md:col-span-2">
+  <div class="relative pb-12 md:col-span-6">
     <div class="sticky top-0">
-      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
+      <span class="text-emerald-400 -left-[42px] absolute rounded-full text-5xl"
         >&bull;</span
       >
+      <div>
+        <h3 class="text-xl font-bold text-emerald-400 inline-block pr-1">{title}</h3> / 
+      <h4 class="font-thin  text-gray-600 dark:text-white inline-block pl-1">{company}</h4>
+      </div>
+      { 
+        jobType === 'FT' ? (<span class="items-center rounded-md bg-emerald-50 dark:bg-cyan-900 px-2 py-1 text-xs font-medium text-emerald-700 dark:text-emerald-300 ring-1 ring-inset ring-emerald-600/20 inline-block">Tiempo completo</span>) : (<span class="items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-inset ring-yellow-600/20 inline-block">Freelance</span>)
 
-      <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
+      }
+      
       <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{date}</time>
+      <p class="text-dark-700 dark:text-dark-200 mt-5">{description}</p>
     </div>
   </div>
-  <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+  <!-- <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
     {description}
     {
       link && (
@@ -52,5 +60,5 @@ const { title, company, description, link, date } = Astro.props
         </LinkInline>
       )
     }
-  </div>
+  </div> -->
 </div>
