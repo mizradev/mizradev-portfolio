@@ -1,0 +1,45 @@
+---
+import SectionContainer from "@/components/SectionContainer.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const personalImageAlt = "Jorge Mizrain Aguilar"
+---
+<Layout
+    title="Reunión Descubrimiento"
+    description="Es necesario tener esta primer reunión para conocer de mejor manera tu proyecto y trazar la mejor ruta para éxito."
+>
+
+    <SectionContainer class="space-y-24 px-4">
+        <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row pt-20">
+            <div
+              class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+            >
+              <p>
+                Me llamo Jorge Mizrain Aguilar pero mis amigos me llaman Mizra. Desde 2015 he ayudado a emprendedores y empresas ha planear y desarrollar productos digitales estratégicos. Actualmente soy <strong
+                  >Desarrollador Frontend en World Vision Honduras.</strong
+                >
+              </p>
+          
+              <p>
+                Algunos de mis éxitos incluyen <strong
+                  >colaborar con Mozilla para el desarrollo de las primeras apps en su
+                  sistema FirefoxOS</strong
+                >. Aunque hoy está desaparecido fue un gran avance en el mundo del
+                desarrollo web.
+              </p>
+          
+              <p>
+                Como creador de contenido, <strong
+                  >cuento con el canal de habla hispana más visto del mundo en la
+                  categoría de <em class="italic">Software & Game Development</em> en Twitch</strong
+                >. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el
+                acceso a contenido de calidad.
+              </p>
+            </div>
+          
+            <img width="200" height="200" src="https://media.licdn.com/dms/image/v2/D4E03AQF_XzkE1xd63g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1706379173901?e=1730937600&v=beta&t=wzh_e8LXBYADDmJq0doI-HQjs_88YJyc7fsCwS2rwb8" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
+          
+          </article>
+    </SectionContainer>
+
+</Layout>
